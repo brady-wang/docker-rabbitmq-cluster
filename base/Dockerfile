@@ -1,5 +1,5 @@
 FROM centos
-MAINTAINER Biju Kunjummen biju.kunjummen@gmail.com
+MAINTAINER brady wang brady.wang@qq.com
 
 RUN yum install -y wget unzip tar
 
@@ -14,4 +14,3 @@ RUN yum install -y  https://github.com/rabbitmq/rabbitmq-server/releases/downloa
 RUN /usr/sbin/rabbitmq-plugins list <<<'y'
 RUN /usr/sbin/rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_stomp rabbitmq_management  rabbitmq_management_agent rabbitmq_federation rabbitmq_federation_management <<<'y'
 
-#CMD /usr/sbin/rabbitmq-server
