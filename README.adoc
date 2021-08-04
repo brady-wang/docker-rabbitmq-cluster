@@ -25,16 +25,16 @@ By default 3 nodes are started up this way:
 [source]
 ----
 rabbit1:
-  image: bijukunjummen/rabbitmq-server:3.7.0
+  image: yeves/rabbitmq-server:3.7.0
   hostname: rabbit1
   ports:
     - "5672:5672"
     - "15672:15672"
   environment:
-    - RABBITMQ_DEFAULT_USER=myuser
-    - RABBITMQ_DEFAULT_PASS=mypass
+    - RABBITMQ_DEFAULT_USER=admin
+    - RABBITMQ_DEFAULT_PASS=123456
 rabbit2:
-  image: bijukunjummen/rabbitmq-server:3.7.0
+  image: yeves/rabbitmq-server:3.7.0
   hostname: rabbit2
   links:
     - rabbit1
@@ -47,7 +47,7 @@ rabbit2:
       - "15673:15672"
 
 rabbit3:
-  image: bijukunjummen/rabbitmq-server:3.7.0
+  image: yeves/rabbitmq-server:3.7.0
   hostname: rabbit3
   links:
     - rabbit1
@@ -63,5 +63,3 @@ if needed, additional nodes can be added to this file. If the entire cluster com
 
 and connection host should look like this: `dockerip:5672,dockerip:5673,dockerip:5674`
 
-
-    

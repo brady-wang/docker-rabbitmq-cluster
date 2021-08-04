@@ -2,7 +2,7 @@ version: '3.5'
 services:
 
   rabbit1:
-    image: yeves/rabbitmq-cluster:latest
+    image: yeves/rabbitmq-server:3.7.0
     hostname: rabbit1
     container_name: docker-rabbitmq-01
     restart: always
@@ -14,7 +14,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=123456
 
   rabbit2:
-    image: yeves/rabbitmq-cluster:latest
+    image: yeves/rabbitmq-server:3.7.0
     hostname: rabbit2
     container_name: docker-rabbitmq-02
     restart: always
@@ -29,7 +29,7 @@ services:
       - "15673:15672"
 
   rabbit3:
-    image: yeves/rabbitmq-cluster:latest
+    image: yeves/rabbitmq-server:3.7.0
     hostname: rabbit3
     container_name: docker-rabbitmq-03
     restart: always
@@ -43,7 +43,7 @@ services:
       - "5674:5672"
 
   rabbit4:
-    image: yeves/rabbitmq-cluster:latest
+    image: yeves/rabbitmq-server:3.7.0
     hostname: rabbit4
     container_name: docker-rabbitmq-04
     restart: always
@@ -58,7 +58,7 @@ services:
       - "5675:5672"
 
   rabbit5:
-    image: yeves/rabbitmq-cluster:latest
+    image: yeves/rabbitmq-server:3.7.0
     hostname: rabbit5
     container_name: docker-rabbitmq-05
     restart: always
