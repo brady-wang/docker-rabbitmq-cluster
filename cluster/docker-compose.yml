@@ -41,6 +41,7 @@ services:
       - CLUSTER_WITH=rabbit1
     ports:
       - "5674:5672"
+      - "15674:15672"
 
   rabbit4:
     image: yeves/rabbitmq-server:3.7.0
@@ -56,6 +57,7 @@ services:
       - CLUSTER_WITH=rabbit1
     ports:
       - "5675:5672"
+      - "15675:15672"
 
   rabbit5:
     image: yeves/rabbitmq-server:3.7.0
@@ -72,3 +74,4 @@ services:
       - CLUSTER_WITH=rabbit1
     ports:
       - "5676:5672"
+      - "15676:15672"
